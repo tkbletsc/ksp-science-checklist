@@ -183,7 +183,7 @@ def get_values(planet,mzone,test):
     
 
    
-no_water_tests = set(['Nose'])
+no_water_tests = set(['Seis','Nose'])
 need_atmosphere_tests = set(['Baro','Nose'])
 
 
