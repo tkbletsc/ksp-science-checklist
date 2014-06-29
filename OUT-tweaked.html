@@ -1,0 +1,1645 @@
+
+<html>
+<Head>
+<style>
+	body {
+		font-family: "Trebuchet MS", Helvetica, sans-serif;
+		font-size: 12pt;
+	}
+    
+    div.header {
+        text-align: center;
+    }
+
+    div.footer {
+        margin-top: 48px;
+        text-align: center;
+        color: #888;
+        font-size:80%;
+    }
+
+    table {
+        border-collapse: collapse;
+        border: none;
+    }
+    
+    tr.newpage {
+        page-break-before: always;
+    }
+    
+    td.null {
+        background-color: #fff;
+        border: none;
+    }
+    
+    th.row {
+        text-align: left;
+        border-top: 1px solid #aaa;
+        border-left: none;
+        border-right: none;
+        border-bottom: 1px solid #aaa;
+    }
+    
+    th.planet {
+        text-align: center;
+    }
+    
+    td,th {
+        padding: 2px;
+        border: 1px solid #aaa;
+        background-color: #e4e4e4;
+    }
+    th.test {
+        width:3em;
+        vertical-align: bottom;
+    }
+    td.valid {
+        background-color: #fff;
+        border: 1px solid #888;
+        ztext-align: center;
+        vertical-align: top;
+        font-size: 70%;
+        color: #aaa;
+    }
+    td.invalid {
+        background-color: #888;
+        border: 1px solid #888;
+    }
+    thead {display: table-header-group;}
+    
+</style>
+</head>
+<body>
+<div class=header>
+    <img src="img/logo.png" width=300><BR>
+    <H1>Science Checklist</h1>
+    Revision 1 &mdash; KSP version 0.23 &mdash; 2014 June 28.
+    <P>
+</div>
+
+<table border=1>
+<thead>
+<tr><Td colspan=3 class=null>
+<th class=test>
+<img src='img/tests/Surf.png' width=48><BR>
+Surf
+<th class=test>
+<img src='img/tests/EVA.png' width=48><BR>
+EVA
+<th class=test>
+<img src='img/tests/Crew.png' width=48><BR>
+Crew
+<th class=test>
+<img src='img/tests/Goo.png' width=48><BR>
+Goo
+<th class=test>
+<img src='img/tests/Matl.png' width=48><BR>
+Matl
+<th class=test>
+<img src='img/tests/Temp.png' width=48><BR>
+Temp
+<th class=test>
+<img src='img/tests/Baro.png' width=48><BR>
+Baro
+<th class=test>
+<img src='img/tests/Grav.png' width=48><BR>
+Grav
+<th class=test>
+<img src='img/tests/Seis.png' width=48><BR>
+Seis
+<th class=test>
+<img src='img/tests/Nose.png' width=48><BR>
+Nose
+<th class=test>
+<img src='img/tests/Recover.png' width=48><BR>
+Recover
+</thead><tbody>
+<tr class=''>
+<th class='row planet' rowspan=3>
+<img src='img/planets/Kerbol.png' width=96><BR>
+Kerbol
+<th class=row rowspan=1>Surface
+<th class=row>&nbsp;
+<td class=invalid>
+<td class=invalid>
+<td class=invalid>
+<td class=invalid>
+<td class=invalid>
+<td class=invalid>
+<td class=invalid rowspan=3>
+<td class=invalid>
+<td class=invalid>
+<td class=invalid rowspan=3>
+<td class=invalid>
+<tr class=''>
+<th class=row rowspan=1>SpaceLow
+<th class=row>&nbsp;
+<td class=invalid rowspan=1>
+<td class=valid>88
+<td class=valid rowspan=1>55
+<td class=valid rowspan=1>110
+<td class=valid rowspan=1>275
+<td class=valid rowspan=1>88
+<td class=valid>220
+<td class=invalid rowspan=1>
+<td class=valid rowspan=2>5
+<tr class=''>
+<th class=row rowspan=1>SpaceHigh
+<th class=row>&nbsp;
+<td class=invalid rowspan=1>
+<td class=valid rowspan=1>88
+<td class=valid rowspan=1>55
+<td class=valid rowspan=1>110
+<td class=valid rowspan=1>275
+<td class=invalid rowspan=1>
+<td class=valid>220
+<td class=invalid rowspan=1>
+<tr class=''>
+<th class='row planet' rowspan=3>
+<img src='img/planets/Moho.png' width=64><BR>
+Moho
+<th class=row rowspan=1>Surface
+<th class=row>&nbsp;
+<td class=valid>270
+<td class=valid>72
+<td class=valid>45
+<td class=valid>90
+<td class=valid>225
+<td class=valid>72
+<td class=invalid rowspan=3>
+<td class=valid>180
+<td class=valid>180
+<td class=invalid rowspan=3>
+<td class=valid rowspan=1>5
+<tr class=''>
+<th class=row rowspan=1>SpaceLow
+<th class=row>&nbsp;
+<td class=invalid rowspan=1>
+<td class=valid>64
+<td class=valid rowspan=1>40
+<td class=valid rowspan=1>80
+<td class=valid rowspan=1>200
+<td class=valid rowspan=1>64
+<td class=valid>160
+<td class=invalid rowspan=1>
+<td class=valid rowspan=2>5
+<tr class=''>
+<th class=row rowspan=1>SpaceHigh
+<th class=row>&nbsp;
+<td class=invalid rowspan=1>
+<td class=valid rowspan=1>64
+<td class=valid rowspan=1>40
+<td class=valid rowspan=1>80
+<td class=valid rowspan=1>200
+<td class=invalid rowspan=1>
+<td class=valid>160
+<td class=invalid rowspan=1>
+<tr class=''>
+<th class='row planet' rowspan=5>
+<img src='img/planets/Eve.png' width=64><BR>
+Eve
+<th class=row rowspan=1>Surface
+<th class=row>&nbsp;
+<td class=valid>360
+<td class=valid>96
+<td class=valid>60
+<td class=valid>120
+<td class=valid>300
+<td class=valid>96
+<td class=valid>144
+<td class=valid>240
+<td class=valid>240
+<td class=valid>240
+<td class=valid rowspan=1>5
+<tr class=''>
+<th class=row rowspan=1>FlyLow
+<th class=row>&nbsp;
+<td class=invalid rowspan=1>
+<td class=valid>56
+<td class=valid>35
+<td class=valid rowspan=1>70
+<td class=valid rowspan=1>175
+<td class=valid>56
+<td class=valid rowspan=1>84
+<td class=invalid rowspan=1>
+<td class=invalid rowspan=1>
+<td class=valid>140
+<td class=valid rowspan=2>5
+<tr class=''>
+<th class=row rowspan=1>FlyHigh
+<th class=row>&nbsp;
+<td class=invalid rowspan=1>
+<td class=valid rowspan=1>56
+<td class=valid rowspan=1>35
+<td class=valid rowspan=1>70
+<td class=valid rowspan=1>175
+<td class=valid rowspan=1>56
+<td class=valid rowspan=1>84
+<td class=invalid rowspan=1>
+<td class=invalid rowspan=1>
+<td class=valid>140
+<tr class=''>
+<th class=row rowspan=1>SpaceLow
+<th class=row>&nbsp;
+<td class=invalid rowspan=1>
+<td class=valid>56
+<td class=valid rowspan=1>35
+<td class=valid rowspan=1>70
+<td class=valid rowspan=1>175
+<td class=valid rowspan=1>56
+<td class=invalid rowspan=1>
+<td class=valid>140
+<td class=invalid rowspan=1>
+<td class=invalid rowspan=1>
+<td class=valid rowspan=2>5
+<tr class=''>
+<th class=row rowspan=1>SpaceHigh
+<th class=row>&nbsp;
+<td class=invalid rowspan=1>
+<td class=valid rowspan=1>56
+<td class=valid rowspan=1>35
+<td class=valid rowspan=1>70
+<td class=valid rowspan=1>175
+<td class=invalid rowspan=1>
+<td class=invalid rowspan=1>
+<td class=valid>140
+<td class=invalid rowspan=1>
+<td class=invalid rowspan=1>
+<tr class=''>
+<th class='row planet' rowspan=3>
+<img src='img/planets/Gilly.png' width=32><BR>
+Gilly
+<th class=row rowspan=1>Surface
+<th class=row>&nbsp;
+<td class=valid>270
+<td class=valid>72
+<td class=valid>45
+<td class=valid>90
+<td class=valid>225
+<td class=valid>72
+<td class=invalid rowspan=3>
+<td class=valid>180
+<td class=valid>180
+<td class=invalid rowspan=3>
+<td class=valid rowspan=1>5
+<tr class=''>
+<th class=row rowspan=1>SpaceLow
+<th class=row>&nbsp;
+<td class=invalid rowspan=1>
+<td class=valid>64
+<td class=valid rowspan=1>40
+<td class=valid rowspan=1>80
+<td class=valid rowspan=1>200
+<td class=valid rowspan=1>64
+<td class=valid>160
+<td class=invalid rowspan=1>
+<td class=valid rowspan=2>5
+<tr class=''>
+<th class=row rowspan=1>SpaceHigh
+<th class=row>&nbsp;
+<td class=invalid rowspan=1>
+<td class=valid rowspan=1>64
+<td class=valid rowspan=1>40
+<td class=valid rowspan=1>80
+<td class=valid rowspan=1>200
+<td class=invalid rowspan=1>
+<td class=valid>160
+<td class=invalid rowspan=1>
+<tr class=''>
+<th class='row planet' rowspan=12>
+<img src='img/planets/Kerbin.png' width=64><BR>
+Kerbin
+<th class=row rowspan=12>Surface
+<th class=row>Grasslands
+<td class=valid>9
+<td class=valid>2.4
+<td class=valid>1.5
+<td class=valid>3
+<td class=valid>7.5
+<td class=valid>2.4
+<td class=valid>3.6
+<td class=valid>6
+<td class=valid>6
+<td class=valid>6
+<td class=invalid rowspan=12>
+<tr class=''>
+<th class=row>Highlands
+<td class=valid>9
+<td class=valid>2.4
+<td class=valid>1.5
+<td class=valid>3
+<td class=valid>7.5
+<td class=valid>2.4
+<td class=valid>3.6
+<td class=valid>6
+<td class=valid>6
+<td class=valid>6
+<tr class=''>
+<th class=row>Mountains
+<td class=valid>9
+<td class=valid>2.4
+<td class=valid>1.5
+<td class=valid>3
+<td class=valid>7.5
+<td class=valid>2.4
+<td class=valid>3.6
+<td class=valid>6
+<td class=valid>6
+<td class=valid>6
+<tr class=''>
+<th class=row>Deserts
+<td class=valid>9
+<td class=valid>2.4
+<td class=valid>1.5
+<td class=valid>3
+<td class=valid>7.5
+<td class=valid>2.4
+<td class=valid>3.6
+<td class=valid>6
+<td class=valid>6
+<td class=valid>6
+<tr class=''>
+<th class=row>Badlands
+<td class=valid>9
+<td class=valid>2.4
+<td class=valid>1.5
+<td class=valid>3
+<td class=valid>7.5
+<td class=valid>2.4
+<td class=valid>3.6
+<td class=valid>6
+<td class=valid>6
+<td class=valid>6
+<tr class=''>
+<th class=row>Tundra
+<td class=valid>9
+<td class=valid>2.4
+<td class=valid>1.5
+<td class=valid>3
+<td class=valid>7.5
+<td class=valid>2.4
+<td class=valid>3.6
+<td class=valid>6
+<td class=valid>6
+<td class=valid>6
+<tr class=''>
+<th class=row>Ice&nbsp;Caps
+<td class=valid>9
+<td class=valid>2.4
+<td class=valid>1.5
+<td class=valid>3
+<td class=valid>7.5
+<td class=valid>2.4
+<td class=valid>3.6
+<td class=valid>6
+<td class=valid>6
+<td class=valid>6
+<tr class=''>
+<th class=row>Water
+<td class=valid>9
+<td class=valid>2.4
+<td class=valid>1.5
+<td class=valid>3
+<td class=valid>7.5
+<td class=valid>2.4
+<td class=valid>3.6
+<td class=valid>6
+<td class=valid>6
+<td class=invalid>
+<tr class=''>
+<th class=row>Shores
+<td class=valid>9
+<td class=valid>2.4
+<td class=valid>1.5
+<td class=valid>3
+<td class=valid>7.5
+<td class=valid>2.4
+<td class=valid>3.6
+<td class=valid>6
+<td class=valid>6
+<td class=valid>6
+<tr class=''>
+<th class=row>KSC
+<td class=valid>9
+<td class=valid>2.4
+<td class=valid>1.5
+<td class=valid>3
+<td class=valid>7.5
+<td class=valid>2.4
+<td class=valid>3.6
+<td class=valid>6
+<td class=valid>6
+<td class=valid>6
+<tr class=''>
+<th class=row>LaunchPad
+<td class=valid>9
+<td class=valid>2.4
+<td class=valid>1.5
+<td class=valid>3
+<td class=valid>7.5
+<td class=valid>2.4
+<td class=valid>3.6
+<td class=valid>6
+<td class=valid>6
+<td class=valid>6
+<tr class=''>
+<th class=row>Runway
+<td class=valid>9
+<td class=valid>2.4
+<td class=valid>1.5
+<td class=valid>3
+<td class=valid>7.5
+<td class=valid>2.4
+<td class=valid>3.6
+<td class=valid>6
+<td class=valid>6
+<td class=valid>6
+<tr class='newpage'>
+<th class='row planet' rowspan=48>
+<img src='img/planets/Kerbin.png' width=64><BR>
+Kerbin
+<th class=row rowspan=12>FlyLow
+<th class=row>Grasslands
+<td class=invalid rowspan=12>
+<td class=valid>5.6
+<td class=valid>3.5
+<td class=valid rowspan=12>7
+<td class=valid rowspan=12>17.5
+<td class=valid>5.6
+<td class=valid rowspan=12>8.4
+<td class=invalid rowspan=12>
+<td class=invalid rowspan=12>
+<td class=valid>14
+<td class=valid rowspan=24>5
+<tr class=''>
+<th class=row>Highlands
+<td class=valid>5.6
+<td class=valid>3.5
+<td class=valid>5.6
+<td class=valid>14
+<tr class=''>
+<th class=row>Mountains
+<td class=valid>5.6
+<td class=valid>3.5
+<td class=valid>5.6
+<td class=valid>14
+<tr class=''>
+<th class=row>Deserts
+<td class=valid>5.6
+<td class=valid>3.5
+<td class=valid>5.6
+<td class=valid>14
+<tr class=''>
+<th class=row>Badlands
+<td class=valid>5.6
+<td class=valid>3.5
+<td class=valid>5.6
+<td class=valid>14
+<tr class=''>
+<th class=row>Tundra
+<td class=valid>5.6
+<td class=valid>3.5
+<td class=valid>5.6
+<td class=valid>14
+<tr class=''>
+<th class=row>Ice&nbsp;Caps
+<td class=valid>5.6
+<td class=valid>3.5
+<td class=valid>5.6
+<td class=valid>14
+<tr class=''>
+<th class=row>Water
+<td class=valid>5.6
+<td class=valid>3.5
+<td class=valid>5.6
+<td class=valid>14
+<tr class=''>
+<th class=row>Shores
+<td class=valid>5.6
+<td class=valid>3.5
+<td class=valid>5.6
+<td class=valid>14
+<tr class=''>
+<th class=row>KSC
+<td class=valid>5.6
+<td class=valid>3.5
+<td class=valid>5.6
+<td class=valid>14
+<tr class=''>
+<th class=row>LaunchPad
+<td class=valid>5.6
+<td class=valid>3.5
+<td class=valid>5.6
+<td class=valid>14
+<tr class=''>
+<th class=row>Runway
+<td class=valid>5.6
+<td class=valid>3.5
+<td class=valid>5.6
+<td class=valid>14
+<tr class=''>
+<th class=row rowspan=12>FlyHigh
+<th class=row>Grasslands
+<td class=invalid rowspan=12>
+<td class=valid rowspan=12>5.6
+<td class=valid rowspan=12>3.5
+<td class=valid rowspan=12>7
+<td class=valid rowspan=12>17.5
+<td class=valid rowspan=12>5.6
+<td class=valid rowspan=12>8.4
+<td class=invalid rowspan=12>
+<td class=invalid rowspan=12>
+<td class=valid>14
+<tr class=''>
+<th class=row>Highlands
+<td class=valid>14
+<tr class=''>
+<th class=row>Mountains
+<td class=valid>14
+<tr class=''>
+<th class=row>Deserts
+<td class=valid>14
+<tr class=''>
+<th class=row>Badlands
+<td class=valid>14
+<tr class=''>
+<th class=row>Tundra
+<td class=valid>14
+<tr class=''>
+<th class=row>Ice&nbsp;Caps
+<td class=valid>14
+<tr class=''>
+<th class=row>Water
+<td class=valid>14
+<tr class=''>
+<th class=row>Shores
+<td class=valid>14
+<tr class=''>
+<th class=row>KSC
+<td class=valid>14
+<tr class=''>
+<th class=row>LaunchPad
+<td class=valid>14
+<tr class=''>
+<th class=row>Runway
+<td class=valid>14
+<tr class=''>
+<th class=row rowspan=12>SpaceLow
+<th class=row>Grasslands
+<td class=invalid rowspan=12>
+<td class=valid>8
+<td class=valid rowspan=12>5
+<td class=valid rowspan=12>10
+<td class=valid rowspan=12>25
+<td class=valid rowspan=12>8
+<td class=invalid rowspan=12>
+<td class=valid>20
+<td class=invalid rowspan=12>
+<td class=invalid rowspan=12>
+<td class=valid rowspan=24>5
+<tr class=''>
+<th class=row>Highlands
+<td class=valid>8
+<td class=valid>20
+<tr class=''>
+<th class=row>Mountains
+<td class=valid>8
+<td class=valid>20
+<tr class=''>
+<th class=row>Deserts
+<td class=valid>8
+<td class=valid>20
+<tr class=''>
+<th class=row>Badlands
+<td class=valid>8
+<td class=valid>20
+<tr class=''>
+<th class=row>Tundra
+<td class=valid>8
+<td class=valid>20
+<tr class=''>
+<th class=row>Ice&nbsp;Caps
+<td class=valid>8
+<td class=valid>20
+<tr class=''>
+<th class=row>Water
+<td class=valid>8
+<td class=valid>20
+<tr class=''>
+<th class=row>Shores
+<td class=valid>8
+<td class=valid>20
+<tr class=''>
+<th class=row>KSC
+<td class=valid>8
+<td class=valid>20
+<tr class=''>
+<th class=row>LaunchPad
+<td class=valid>8
+<td class=valid>20
+<tr class=''>
+<th class=row>Runway
+<td class=valid>8
+<td class=valid>20
+<tr class=''>
+<th class=row rowspan=12>SpaceHigh
+<th class=row>Grasslands
+<td class=invalid rowspan=12>
+<td class=valid rowspan=12>8
+<td class=valid rowspan=12>5
+<td class=valid rowspan=12>10
+<td class=valid rowspan=12>25
+<td class=invalid rowspan=12>
+<td class=invalid rowspan=12>
+<td class=valid>20
+<td class=invalid rowspan=12>
+<td class=invalid rowspan=12>
+<tr class=''>
+<th class=row>Highlands
+<td class=valid>20
+<tr class=''>
+<th class=row>Mountains
+<td class=valid>20
+<tr class=''>
+<th class=row>Deserts
+<td class=valid>20
+<tr class=''>
+<th class=row>Badlands
+<td class=valid>20
+<tr class=''>
+<th class=row>Tundra
+<td class=valid>20
+<tr class=''>
+<th class=row>Ice&nbsp;Caps
+<td class=valid>20
+<tr class=''>
+<th class=row>Water
+<td class=valid>20
+<tr class=''>
+<th class=row>Shores
+<td class=valid>20
+<tr class=''>
+<th class=row>KSC
+<td class=valid>20
+<tr class=''>
+<th class=row>LaunchPad
+<td class=valid>20
+<tr class=''>
+<th class=row>Runway
+<td class=valid>20
+<tr class='newpage'>
+<th class='row planet' rowspan=45>
+<img src='img/planets/Mun.png' width=32><BR>
+Mun
+<th class=row rowspan=15>Surface
+<th class=row>Northern&nbsp;Basin
+<td class=valid>120
+<td class=valid>32
+<td class=valid>20
+<td class=valid>40
+<td class=valid>100
+<td class=valid>32
+<td class=invalid rowspan=45>
+<td class=valid>80
+<td class=valid>80
+<td class=invalid rowspan=45>
+<td class=valid rowspan=15>5
+<tr class=''>
+<th class=row>Highland&nbsp;Craters
+<td class=valid>120
+<td class=valid>32
+<td class=valid>20
+<td class=valid>40
+<td class=valid>100
+<td class=valid>32
+<td class=valid>80
+<td class=valid>80
+<tr class=''>
+<th class=row>Highlands
+<td class=valid>120
+<td class=valid>32
+<td class=valid>20
+<td class=valid>40
+<td class=valid>100
+<td class=valid>32
+<td class=valid>80
+<td class=valid>80
+<tr class=''>
+<th class=row>Midland&nbsp;Craters
+<td class=valid>120
+<td class=valid>32
+<td class=valid>20
+<td class=valid>40
+<td class=valid>100
+<td class=valid>32
+<td class=valid>80
+<td class=valid>80
+<tr class=''>
+<th class=row>Midlands
+<td class=valid>120
+<td class=valid>32
+<td class=valid>20
+<td class=valid>40
+<td class=valid>100
+<td class=valid>32
+<td class=valid>80
+<td class=valid>80
+<tr class=''>
+<th class=row>Canyons
+<td class=valid>120
+<td class=valid>32
+<td class=valid>20
+<td class=valid>40
+<td class=valid>100
+<td class=valid>32
+<td class=valid>80
+<td class=valid>80
+<tr class=''>
+<th class=row>East&nbsp;Crater
+<td class=valid>120
+<td class=valid>32
+<td class=valid>20
+<td class=valid>40
+<td class=valid>100
+<td class=valid>32
+<td class=valid>80
+<td class=valid>80
+<tr class=''>
+<th class=row>East&nbsp;Farside&nbsp;Crater
+<td class=valid>120
+<td class=valid>32
+<td class=valid>20
+<td class=valid>40
+<td class=valid>100
+<td class=valid>32
+<td class=valid>80
+<td class=valid>80
+<tr class=''>
+<th class=row>Farside&nbsp;Crater
+<td class=valid>120
+<td class=valid>32
+<td class=valid>20
+<td class=valid>40
+<td class=valid>100
+<td class=valid>32
+<td class=valid>80
+<td class=valid>80
+<tr class=''>
+<th class=row>Northwest&nbsp;Crater
+<td class=valid>120
+<td class=valid>32
+<td class=valid>20
+<td class=valid>40
+<td class=valid>100
+<td class=valid>32
+<td class=valid>80
+<td class=valid>80
+<tr class=''>
+<th class=row>Southwest&nbsp;Crater
+<td class=valid>120
+<td class=valid>32
+<td class=valid>20
+<td class=valid>40
+<td class=valid>100
+<td class=valid>32
+<td class=valid>80
+<td class=valid>80
+<tr class=''>
+<th class=row>Twin&nbsp;Craters
+<td class=valid>120
+<td class=valid>32
+<td class=valid>20
+<td class=valid>40
+<td class=valid>100
+<td class=valid>32
+<td class=valid>80
+<td class=valid>80
+<tr class=''>
+<th class=row>Polar&nbsp;Crater
+<td class=valid>120
+<td class=valid>32
+<td class=valid>20
+<td class=valid>40
+<td class=valid>100
+<td class=valid>32
+<td class=valid>80
+<td class=valid>80
+<tr class=''>
+<th class=row>Polar&nbsp;Lowlands
+<td class=valid>120
+<td class=valid>32
+<td class=valid>20
+<td class=valid>40
+<td class=valid>100
+<td class=valid>32
+<td class=valid>80
+<td class=valid>80
+<tr class=''>
+<th class=row>Poles
+<td class=valid>120
+<td class=valid>32
+<td class=valid>20
+<td class=valid>40
+<td class=valid>100
+<td class=valid>32
+<td class=valid>80
+<td class=valid>80
+<tr class=''>
+<th class=row rowspan=15>SpaceLow
+<th class=row>Northern&nbsp;Basin
+<td class=invalid rowspan=15>
+<td class=valid>24
+<td class=valid rowspan=15>15
+<td class=valid rowspan=15>30
+<td class=valid rowspan=15>75
+<td class=valid rowspan=15>24
+<td class=valid>60
+<td class=invalid rowspan=15>
+<td class=valid rowspan=30>5
+<tr class=''>
+<th class=row>Highland&nbsp;Craters
+<td class=valid>24
+<td class=valid>60
+<tr class=''>
+<th class=row>Highlands
+<td class=valid>24
+<td class=valid>60
+<tr class=''>
+<th class=row>Midland&nbsp;Craters
+<td class=valid>24
+<td class=valid>60
+<tr class=''>
+<th class=row>Midlands
+<td class=valid>24
+<td class=valid>60
+<tr class=''>
+<th class=row>Canyons
+<td class=valid>24
+<td class=valid>60
+<tr class=''>
+<th class=row>East&nbsp;Crater
+<td class=valid>24
+<td class=valid>60
+<tr class=''>
+<th class=row>East&nbsp;Farside&nbsp;Crater
+<td class=valid>24
+<td class=valid>60
+<tr class=''>
+<th class=row>Farside&nbsp;Crater
+<td class=valid>24
+<td class=valid>60
+<tr class=''>
+<th class=row>Northwest&nbsp;Crater
+<td class=valid>24
+<td class=valid>60
+<tr class=''>
+<th class=row>Southwest&nbsp;Crater
+<td class=valid>24
+<td class=valid>60
+<tr class=''>
+<th class=row>Twin&nbsp;Craters
+<td class=valid>24
+<td class=valid>60
+<tr class=''>
+<th class=row>Polar&nbsp;Crater
+<td class=valid>24
+<td class=valid>60
+<tr class=''>
+<th class=row>Polar&nbsp;Lowlands
+<td class=valid>24
+<td class=valid>60
+<tr class=''>
+<th class=row>Poles
+<td class=valid>24
+<td class=valid>60
+<tr class=''>
+<th class=row rowspan=15>SpaceHigh
+<th class=row>Northern&nbsp;Basin
+<td class=invalid rowspan=15>
+<td class=valid rowspan=15>24
+<td class=valid rowspan=15>15
+<td class=valid rowspan=15>30
+<td class=valid rowspan=15>75
+<td class=invalid rowspan=15>
+<td class=valid>60
+<td class=invalid rowspan=15>
+<tr class=''>
+<th class=row>Highland&nbsp;Craters
+<td class=valid>60
+<tr class=''>
+<th class=row>Highlands
+<td class=valid>60
+<tr class=''>
+<th class=row>Midland&nbsp;Craters
+<td class=valid>60
+<tr class=''>
+<th class=row>Midlands
+<td class=valid>60
+<tr class=''>
+<th class=row>Canyons
+<td class=valid>60
+<tr class=''>
+<th class=row>East&nbsp;Crater
+<td class=valid>60
+<tr class=''>
+<th class=row>East&nbsp;Farside&nbsp;Crater
+<td class=valid>60
+<tr class=''>
+<th class=row>Farside&nbsp;Crater
+<td class=valid>60
+<tr class=''>
+<th class=row>Northwest&nbsp;Crater
+<td class=valid>60
+<tr class=''>
+<th class=row>Southwest&nbsp;Crater
+<td class=valid>60
+<tr class=''>
+<th class=row>Twin&nbsp;Craters
+<td class=valid>60
+<tr class=''>
+<th class=row>Polar&nbsp;Crater
+<td class=valid>60
+<tr class=''>
+<th class=row>Polar&nbsp;Lowlands
+<td class=valid>60
+<tr class=''>
+<th class=row>Poles
+<td class=valid>60
+<tr class='newpage'>
+<th class='row planet' rowspan=27>
+<img src='img/planets/Minmus.png' width=32><BR>
+Minmus
+<th class=row rowspan=9>Surface
+<th class=row>Highland
+<td class=valid>150
+<td class=valid>40
+<td class=valid>25
+<td class=valid>50
+<td class=valid>125
+<td class=valid>40
+<td class=invalid rowspan=27>
+<td class=valid>100
+<td class=valid>100
+<td class=invalid rowspan=27>
+<td class=valid rowspan=9>5
+<tr class=''>
+<th class=row>Midlands
+<td class=valid>150
+<td class=valid>40
+<td class=valid>25
+<td class=valid>50
+<td class=valid>125
+<td class=valid>40
+<td class=valid>100
+<td class=valid>100
+<tr class=''>
+<th class=row>Lowlands
+<td class=valid>150
+<td class=valid>40
+<td class=valid>25
+<td class=valid>50
+<td class=valid>125
+<td class=valid>40
+<td class=valid>100
+<td class=valid>100
+<tr class=''>
+<th class=row>Slopes
+<td class=valid>150
+<td class=valid>40
+<td class=valid>25
+<td class=valid>50
+<td class=valid>125
+<td class=valid>40
+<td class=valid>100
+<td class=valid>100
+<tr class=''>
+<th class=row>Lesser&nbsp;Flats
+<td class=valid>150
+<td class=valid>40
+<td class=valid>25
+<td class=valid>50
+<td class=valid>125
+<td class=valid>40
+<td class=valid>100
+<td class=valid>100
+<tr class=''>
+<th class=row>Flats
+<td class=valid>150
+<td class=valid>40
+<td class=valid>25
+<td class=valid>50
+<td class=valid>125
+<td class=valid>40
+<td class=valid>100
+<td class=valid>100
+<tr class=''>
+<th class=row>Great&nbsp;Flats
+<td class=valid>150
+<td class=valid>40
+<td class=valid>25
+<td class=valid>50
+<td class=valid>125
+<td class=valid>40
+<td class=valid>100
+<td class=valid>100
+<tr class=''>
+<th class=row>Greater&nbsp;Flats
+<td class=valid>150
+<td class=valid>40
+<td class=valid>25
+<td class=valid>50
+<td class=valid>125
+<td class=valid>40
+<td class=valid>100
+<td class=valid>100
+<tr class=''>
+<th class=row>Poles
+<td class=valid>150
+<td class=valid>40
+<td class=valid>25
+<td class=valid>50
+<td class=valid>125
+<td class=valid>40
+<td class=valid>100
+<td class=valid>100
+<tr class=''>
+<th class=row rowspan=9>SpaceLow
+<th class=row>Highland
+<td class=invalid rowspan=9>
+<td class=valid>32
+<td class=valid rowspan=9>20
+<td class=valid rowspan=9>40
+<td class=valid rowspan=9>100
+<td class=valid rowspan=9>32
+<td class=valid>80
+<td class=invalid rowspan=9>
+<td class=valid rowspan=18>5
+<tr class=''>
+<th class=row>Midlands
+<td class=valid>32
+<td class=valid>80
+<tr class=''>
+<th class=row>Lowlands
+<td class=valid>32
+<td class=valid>80
+<tr class=''>
+<th class=row>Slopes
+<td class=valid>32
+<td class=valid>80
+<tr class=''>
+<th class=row>Lesser&nbsp;Flats
+<td class=valid>32
+<td class=valid>80
+<tr class=''>
+<th class=row>Flats
+<td class=valid>32
+<td class=valid>80
+<tr class=''>
+<th class=row>Great&nbsp;Flats
+<td class=valid>32
+<td class=valid>80
+<tr class=''>
+<th class=row>Greater&nbsp;Flats
+<td class=valid>32
+<td class=valid>80
+<tr class=''>
+<th class=row>Poles
+<td class=valid>32
+<td class=valid>80
+<tr class=''>
+<th class=row rowspan=9>SpaceHigh
+<th class=row>Highland
+<td class=invalid rowspan=9>
+<td class=valid rowspan=9>32
+<td class=valid rowspan=9>20
+<td class=valid rowspan=9>40
+<td class=valid rowspan=9>100
+<td class=invalid rowspan=9>
+<td class=valid>80
+<td class=invalid rowspan=9>
+<tr class=''>
+<th class=row>Midlands
+<td class=valid>80
+<tr class=''>
+<th class=row>Lowlands
+<td class=valid>80
+<tr class=''>
+<th class=row>Slopes
+<td class=valid>80
+<tr class=''>
+<th class=row>Lesser&nbsp;Flats
+<td class=valid>80
+<tr class=''>
+<th class=row>Flats
+<td class=valid>80
+<tr class=''>
+<th class=row>Great&nbsp;Flats
+<td class=valid>80
+<tr class=''>
+<th class=row>Greater&nbsp;Flats
+<td class=valid>80
+<tr class=''>
+<th class=row>Poles
+<td class=valid>80
+<tr class=''>
+<th class='row planet' rowspan=5>
+<img src='img/planets/Duna.png' width=64><BR>
+Duna
+<th class=row rowspan=1>Surface
+<th class=row>&nbsp;
+<td class=valid>240
+<td class=valid>64
+<td class=valid>40
+<td class=valid>80
+<td class=valid>200
+<td class=valid>64
+<td class=valid>96
+<td class=valid>160
+<td class=valid>160
+<td class=valid>160
+<td class=valid rowspan=1>5
+<tr class=''>
+<th class=row rowspan=1>FlyLow
+<th class=row>&nbsp;
+<td class=invalid rowspan=1>
+<td class=valid>56
+<td class=valid>35
+<td class=valid rowspan=1>70
+<td class=valid rowspan=1>175
+<td class=valid>56
+<td class=valid rowspan=1>84
+<td class=invalid rowspan=1>
+<td class=invalid rowspan=1>
+<td class=valid>140
+<td class=valid rowspan=2>5
+<tr class=''>
+<th class=row rowspan=1>FlyHigh
+<th class=row>&nbsp;
+<td class=invalid rowspan=1>
+<td class=valid rowspan=1>56
+<td class=valid rowspan=1>35
+<td class=valid rowspan=1>70
+<td class=valid rowspan=1>175
+<td class=valid rowspan=1>56
+<td class=valid rowspan=1>84
+<td class=invalid rowspan=1>
+<td class=invalid rowspan=1>
+<td class=valid>140
+<tr class=''>
+<th class=row rowspan=1>SpaceLow
+<th class=row>&nbsp;
+<td class=invalid rowspan=1>
+<td class=valid>56
+<td class=valid rowspan=1>35
+<td class=valid rowspan=1>70
+<td class=valid rowspan=1>175
+<td class=valid rowspan=1>56
+<td class=invalid rowspan=1>
+<td class=valid>140
+<td class=invalid rowspan=1>
+<td class=invalid rowspan=1>
+<td class=valid rowspan=2>5
+<tr class=''>
+<th class=row rowspan=1>SpaceHigh
+<th class=row>&nbsp;
+<td class=invalid rowspan=1>
+<td class=valid rowspan=1>56
+<td class=valid rowspan=1>35
+<td class=valid rowspan=1>70
+<td class=valid rowspan=1>175
+<td class=invalid rowspan=1>
+<td class=invalid rowspan=1>
+<td class=valid>140
+<td class=invalid rowspan=1>
+<td class=invalid rowspan=1>
+<tr class=''>
+<th class='row planet' rowspan=3>
+<img src='img/planets/Ike.png' width=32><BR>
+Ike
+<th class=row rowspan=1>Surface
+<th class=row>&nbsp;
+<td class=valid>270
+<td class=valid>72
+<td class=valid>45
+<td class=valid>90
+<td class=valid>225
+<td class=valid>72
+<td class=invalid rowspan=3>
+<td class=valid>180
+<td class=valid>180
+<td class=invalid rowspan=3>
+<td class=valid rowspan=1>5
+<tr class=''>
+<th class=row rowspan=1>SpaceLow
+<th class=row>&nbsp;
+<td class=invalid rowspan=1>
+<td class=valid>64
+<td class=valid rowspan=1>40
+<td class=valid rowspan=1>80
+<td class=valid rowspan=1>200
+<td class=valid rowspan=1>64
+<td class=valid>160
+<td class=invalid rowspan=1>
+<td class=valid rowspan=2>5
+<tr class=''>
+<th class=row rowspan=1>SpaceHigh
+<th class=row>&nbsp;
+<td class=invalid rowspan=1>
+<td class=valid rowspan=1>64
+<td class=valid rowspan=1>40
+<td class=valid rowspan=1>80
+<td class=valid rowspan=1>200
+<td class=invalid rowspan=1>
+<td class=valid>160
+<td class=invalid rowspan=1>
+<tr class=''>
+<th class='row planet' rowspan=3>
+<img src='img/planets/Dres.png' width=64><BR>
+Dres
+<th class=row rowspan=1>Surface
+<th class=row>&nbsp;
+<td class=valid>240
+<td class=valid>64
+<td class=valid>40
+<td class=valid>80
+<td class=valid>200
+<td class=valid>64
+<td class=invalid rowspan=3>
+<td class=valid>160
+<td class=valid>160
+<td class=invalid rowspan=3>
+<td class=valid rowspan=1>5
+<tr class=''>
+<th class=row rowspan=1>SpaceLow
+<th class=row>&nbsp;
+<td class=invalid rowspan=1>
+<td class=valid>56
+<td class=valid rowspan=1>35
+<td class=valid rowspan=1>70
+<td class=valid rowspan=1>175
+<td class=valid rowspan=1>56
+<td class=valid>140
+<td class=invalid rowspan=1>
+<td class=valid rowspan=2>5
+<tr class=''>
+<th class=row rowspan=1>SpaceHigh
+<th class=row>&nbsp;
+<td class=invalid rowspan=1>
+<td class=valid rowspan=1>56
+<td class=valid rowspan=1>35
+<td class=valid rowspan=1>70
+<td class=valid rowspan=1>175
+<td class=invalid rowspan=1>
+<td class=valid>140
+<td class=invalid rowspan=1>
+<tr class=''>
+<th class='row planet' rowspan=5>
+<img src='img/planets/Jool.png' width=64><BR>
+Jool
+<th class=row rowspan=1>Surface
+<th class=row>&nbsp;
+<td class=invalid>
+<td class=invalid>
+<td class=invalid>
+<td class=invalid>
+<td class=invalid>
+<td class=invalid>
+<td class=invalid>
+<td class=invalid>
+<td class=invalid>
+<td class=invalid>
+<td class=invalid>
+<tr class=''>
+<th class=row rowspan=1>FlyLow
+<th class=row>&nbsp;
+<td class=invalid rowspan=1>
+<td class=valid>56
+<td class=valid>35
+<td class=valid rowspan=1>70
+<td class=valid rowspan=1>175
+<td class=valid>56
+<td class=valid rowspan=1>84
+<td class=invalid rowspan=1>
+<td class=invalid rowspan=1>
+<td class=valid>140
+<td class=valid rowspan=2>5
+<tr class=''>
+<th class=row rowspan=1>FlyHigh
+<th class=row>&nbsp;
+<td class=invalid rowspan=1>
+<td class=valid rowspan=1>56
+<td class=valid rowspan=1>35
+<td class=valid rowspan=1>70
+<td class=valid rowspan=1>175
+<td class=valid rowspan=1>56
+<td class=valid rowspan=1>84
+<td class=invalid rowspan=1>
+<td class=invalid rowspan=1>
+<td class=valid>140
+<tr class=''>
+<th class=row rowspan=1>SpaceLow
+<th class=row>&nbsp;
+<td class=invalid rowspan=1>
+<td class=valid>56
+<td class=valid rowspan=1>35
+<td class=valid rowspan=1>70
+<td class=valid rowspan=1>175
+<td class=valid rowspan=1>56
+<td class=invalid rowspan=1>
+<td class=valid>140
+<td class=invalid rowspan=1>
+<td class=invalid rowspan=1>
+<td class=valid rowspan=2>5
+<tr class=''>
+<th class=row rowspan=1>SpaceHigh
+<th class=row>&nbsp;
+<td class=invalid rowspan=1>
+<td class=valid rowspan=1>56
+<td class=valid rowspan=1>35
+<td class=valid rowspan=1>70
+<td class=valid rowspan=1>175
+<td class=invalid rowspan=1>
+<td class=invalid rowspan=1>
+<td class=valid>140
+<td class=invalid rowspan=1>
+<td class=invalid rowspan=1>
+<tr class='newpage'>
+<th class='row planet' rowspan=5>
+<img src='img/planets/Laythe.png' width=32><BR>
+Laythe
+<th class=row rowspan=1>Surface
+<th class=row>&nbsp;
+<td class=valid>300
+<td class=valid>80
+<td class=valid>50
+<td class=valid>100
+<td class=valid>250
+<td class=valid>80
+<td class=valid>120
+<td class=valid>200
+<td class=valid>200
+<td class=valid>200
+<td class=valid rowspan=1>5
+<tr class=''>
+<th class=row rowspan=1>FlyLow
+<th class=row>&nbsp;
+<td class=invalid rowspan=1>
+<td class=valid>72
+<td class=valid>45
+<td class=valid rowspan=1>90
+<td class=valid rowspan=1>225
+<td class=valid>72
+<td class=valid rowspan=1>108
+<td class=invalid rowspan=1>
+<td class=invalid rowspan=1>
+<td class=valid>180
+<td class=valid rowspan=2>5
+<tr class=''>
+<th class=row rowspan=1>FlyHigh
+<th class=row>&nbsp;
+<td class=invalid rowspan=1>
+<td class=valid rowspan=1>72
+<td class=valid rowspan=1>45
+<td class=valid rowspan=1>90
+<td class=valid rowspan=1>225
+<td class=valid rowspan=1>72
+<td class=valid rowspan=1>108
+<td class=invalid rowspan=1>
+<td class=invalid rowspan=1>
+<td class=valid>180
+<tr class=''>
+<th class=row rowspan=1>SpaceLow
+<th class=row>&nbsp;
+<td class=invalid rowspan=1>
+<td class=valid>72
+<td class=valid rowspan=1>45
+<td class=valid rowspan=1>90
+<td class=valid rowspan=1>225
+<td class=valid rowspan=1>72
+<td class=invalid rowspan=1>
+<td class=valid>180
+<td class=invalid rowspan=1>
+<td class=invalid rowspan=1>
+<td class=valid rowspan=2>5
+<tr class=''>
+<th class=row rowspan=1>SpaceHigh
+<th class=row>&nbsp;
+<td class=invalid rowspan=1>
+<td class=valid rowspan=1>72
+<td class=valid rowspan=1>45
+<td class=valid rowspan=1>90
+<td class=valid rowspan=1>225
+<td class=invalid rowspan=1>
+<td class=invalid rowspan=1>
+<td class=valid>180
+<td class=invalid rowspan=1>
+<td class=invalid rowspan=1>
+<tr class=''>
+<th class='row planet' rowspan=3>
+<img src='img/planets/Vall.png' width=32><BR>
+Vall
+<th class=row rowspan=1>Surface
+<th class=row>&nbsp;
+<td class=valid>300
+<td class=valid>80
+<td class=valid>50
+<td class=valid>100
+<td class=valid>250
+<td class=valid>80
+<td class=invalid rowspan=3>
+<td class=valid>200
+<td class=valid>200
+<td class=invalid rowspan=3>
+<td class=valid rowspan=1>5
+<tr class=''>
+<th class=row rowspan=1>SpaceLow
+<th class=row>&nbsp;
+<td class=invalid rowspan=1>
+<td class=valid>72
+<td class=valid rowspan=1>45
+<td class=valid rowspan=1>90
+<td class=valid rowspan=1>225
+<td class=valid rowspan=1>72
+<td class=valid>180
+<td class=invalid rowspan=1>
+<td class=valid rowspan=2>5
+<tr class=''>
+<th class=row rowspan=1>SpaceHigh
+<th class=row>&nbsp;
+<td class=invalid rowspan=1>
+<td class=valid rowspan=1>72
+<td class=valid rowspan=1>45
+<td class=valid rowspan=1>90
+<td class=valid rowspan=1>225
+<td class=invalid rowspan=1>
+<td class=valid>180
+<td class=invalid rowspan=1>
+<tr class=''>
+<th class='row planet' rowspan=3>
+<img src='img/planets/Tylo.png' width=32><BR>
+Tylo
+<th class=row rowspan=1>Surface
+<th class=row>&nbsp;
+<td class=valid>330
+<td class=valid>88
+<td class=valid>55
+<td class=valid>110
+<td class=valid>275
+<td class=valid>88
+<td class=invalid rowspan=3>
+<td class=valid>220
+<td class=valid>220
+<td class=invalid rowspan=3>
+<td class=valid rowspan=1>5
+<tr class=''>
+<th class=row rowspan=1>SpaceLow
+<th class=row>&nbsp;
+<td class=invalid rowspan=1>
+<td class=valid>80
+<td class=valid rowspan=1>50
+<td class=valid rowspan=1>100
+<td class=valid rowspan=1>250
+<td class=valid rowspan=1>80
+<td class=valid>200
+<td class=invalid rowspan=1>
+<td class=valid rowspan=2>5
+<tr class=''>
+<th class=row rowspan=1>SpaceHigh
+<th class=row>&nbsp;
+<td class=invalid rowspan=1>
+<td class=valid rowspan=1>80
+<td class=valid rowspan=1>50
+<td class=valid rowspan=1>100
+<td class=valid rowspan=1>250
+<td class=invalid rowspan=1>
+<td class=valid>200
+<td class=invalid rowspan=1>
+<tr class=''>
+<th class='row planet' rowspan=3>
+<img src='img/planets/Bop.png' width=32><BR>
+Bop
+<th class=row rowspan=1>Surface
+<th class=row>&nbsp;
+<td class=valid>270
+<td class=valid>72
+<td class=valid>45
+<td class=valid>90
+<td class=valid>225
+<td class=valid>72
+<td class=invalid rowspan=3>
+<td class=valid>180
+<td class=valid>180
+<td class=invalid rowspan=3>
+<td class=valid rowspan=1>5
+<tr class=''>
+<th class=row rowspan=1>SpaceLow
+<th class=row>&nbsp;
+<td class=invalid rowspan=1>
+<td class=valid>64
+<td class=valid rowspan=1>40
+<td class=valid rowspan=1>80
+<td class=valid rowspan=1>200
+<td class=valid rowspan=1>64
+<td class=valid>160
+<td class=invalid rowspan=1>
+<td class=valid rowspan=2>5
+<tr class=''>
+<th class=row rowspan=1>SpaceHigh
+<th class=row>&nbsp;
+<td class=invalid rowspan=1>
+<td class=valid rowspan=1>64
+<td class=valid rowspan=1>40
+<td class=valid rowspan=1>80
+<td class=valid rowspan=1>200
+<td class=invalid rowspan=1>
+<td class=valid>160
+<td class=invalid rowspan=1>
+<tr class=''>
+<th class='row planet' rowspan=3>
+<img src='img/planets/Pol.png' width=32><BR>
+Pol
+<th class=row rowspan=1>Surface
+<th class=row>&nbsp;
+<td class=valid>270
+<td class=valid>72
+<td class=valid>45
+<td class=valid>90
+<td class=valid>225
+<td class=valid>72
+<td class=invalid rowspan=3>
+<td class=valid>180
+<td class=valid>180
+<td class=invalid rowspan=3>
+<td class=valid rowspan=1>5
+<tr class=''>
+<th class=row rowspan=1>SpaceLow
+<th class=row>&nbsp;
+<td class=invalid rowspan=1>
+<td class=valid>64
+<td class=valid rowspan=1>40
+<td class=valid rowspan=1>80
+<td class=valid rowspan=1>200
+<td class=valid rowspan=1>64
+<td class=valid>160
+<td class=invalid rowspan=1>
+<td class=valid rowspan=2>5
+<tr class=''>
+<th class=row rowspan=1>SpaceHigh
+<th class=row>&nbsp;
+<td class=invalid rowspan=1>
+<td class=valid rowspan=1>64
+<td class=valid rowspan=1>40
+<td class=valid rowspan=1>80
+<td class=valid rowspan=1>200
+<td class=invalid rowspan=1>
+<td class=valid>160
+<td class=invalid rowspan=1>
+<tr class=''>
+<th class='row planet' rowspan=3>
+<img src='img/planets/Eeloo.png' width=64><BR>
+Eeloo
+<th class=row rowspan=1>Surface
+<th class=row>&nbsp;
+<td class=valid>270
+<td class=valid>72
+<td class=valid>45
+<td class=valid>90
+<td class=valid>225
+<td class=valid>72
+<td class=invalid rowspan=3>
+<td class=valid>180
+<td class=valid>180
+<td class=invalid rowspan=3>
+<td class=valid rowspan=1>5
+<tr class=''>
+<th class=row rowspan=1>SpaceLow
+<th class=row>&nbsp;
+<td class=invalid rowspan=1>
+<td class=valid>64
+<td class=valid rowspan=1>40
+<td class=valid rowspan=1>80
+<td class=valid rowspan=1>200
+<td class=valid rowspan=1>64
+<td class=valid>160
+<td class=invalid rowspan=1>
+<td class=valid rowspan=2>5
+<tr class=''>
+<th class=row rowspan=1>SpaceHigh
+<th class=row>&nbsp;
+<td class=invalid rowspan=1>
+<td class=valid rowspan=1>64
+<td class=valid rowspan=1>40
+<td class=valid rowspan=1>80
+<td class=valid rowspan=1>200
+<td class=invalid rowspan=1>
+<td class=valid>160
+<td class=invalid rowspan=1>
+</tbody>
+</table>
+
+<div class=footer>
+Created by Tyler Bletsch &mdash; <a href="http://discspace.org/">discspace.org</a>
+</div>
+</body></html>
+
+
