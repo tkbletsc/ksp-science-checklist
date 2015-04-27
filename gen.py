@@ -2,6 +2,7 @@
 
 # Generate an HTML file representing a Kerbal Space Program science checklist
 # Created by Tyler Bletsch -- discspace.org
+# Modified for KSP 1.0 by Dimitri "Tyrope" Molenaars -- tyrope.nl
 
 
 import sys,os,re
@@ -27,51 +28,54 @@ def fmt(v):
     else:
         return "%d" % v
 
+#Known bug: Splashed and Landed aren't modeled seperately,
+# causing inaccuracies across several planets and biomes.
 biomes = {
-    'Kerbin': "Grasslands,Highlands,Mountains,Deserts,Badlands,Tundra,Ice Caps,Water,Shores,KSC,LaunchPad,Runway".split(','),
-    'Mun': "Northern Basin,Highland Craters,Highlands,Midland Craters,Midlands,Canyons,East Crater,East Farside Crater,Farside Crater,Northwest Crater,Southwest Crater,Twin Craters,Polar Crater,Polar Lowlands,Poles".split(','),
-    'Minmus': "Highland,Midlands,Lowlands,Slopes,Lesser Flats,Flats,Great Flats,Greater Flats,Poles".split(','),
-#    'Laythe': "Surface,Water".split(','),
-#    'Eve': "Surface,Water".split(','),             # BUG: because i don't model "splash" and "land" as separate situations, i can't represent laythe and eve properly.  meh.
+    'Bop': ["Peaks","Poles","Ridges","Slopes","Valley"],
+    'Dres': ["Canyons","Highlands","Impact Craters","Impact Ejecta","Lowlands",
+        "Midlands","Poles","Ridges"],
+    'Duna': ["Craters","Highlands","Lowlands","Midlands","Poles"],
+    'Eeloo': ["Craters","Glaciers","Highlands","Ice Canyons","Lowlands",
+        "Midlands","Poles"],
+    'Eve': ["Explodium Sea","Highlands","Impact Ejecta","Lowlands","Midlands",
+        "Peaks","Poles"],
+    'Gilly': ["Highlands","Lowlands","Midlands"],
+    'Ike': ["Central Mountain Range","Eastern Mountain Ridge","Lowlands",
+        "Midlands","Polar Lowlands","South Eastern Mountain Range","South Pole",
+        "Western Mountain Ridge"],
+    'Jool': ['&nbsp;'], #Jool has no biomes. :(
+    'Kerbin': ["Administration","Astronaut Complex","Badlands","Crawlerway",
+        "Deserts","Flag Pole","Grasslands","Highlands","Ice Caps","KSC",
+        "LaunchPad","Mission Control","Mountains","R&D","R&D Central Building",
+        "R&D Corner Lab","R&D Main Building","R&D Observatory","R&D Side Lab",
+        "R&D Small Lab","R&D Tanks","R&D Wind Tunnel","Runway","Shores","SPH",
+        "SPH Main Building (Roof)","SPH Round Tank","SPH Tanks",
+        "SPH Water Tower","Tracking Station","Tracking Station Dish East",
+        "Tracking Station Dish North","Tracking Station Dish South",
+        "Tracking Station Hub","Tundra","VAB","VAB Main Building (Roof)",
+        "VAB Pod Memorial","VAB Round Tank","VAB Tanks","Water"],
+    'Laythe': ["Cresent Bay","Dunes","Poles","Shores","The Sagen Sea"],
+    'Minmus': ["Flats","Greater Flats","Great Flats","Highlands","Lesser Flats",
+        "Lowlands","Midlands","Poles","Slopes"],
+    'Moho': ["Canyon","Central Lowlands","Highlands","Midlands",
+        "Minor Craters","Northern Sinkhole","Northern Sinkhole Ridge",
+        "North Pole","South Eastern Lowlands","South Pole",
+        "South Western Lowlands","Western Lowlands"],
+    'Mun': ["Canyons","East Crater","East Farside Crater","Farside Crater",
+        "Highland Craters","Highlands","Midland Craters","Midlands",
+        "Northern Basin","Northwest Crater","Polar Crater","Polar Lowlands",
+        "Poles","Southwest Crater","Twin Craters"],
+    'Pol': ["Highlands","Lowlands","Midlands","Poles"],
+    'Kerbol': ['&nbsp;'], # Kerbol has no biomes. :(
+    'Tylo': [
+        # Tylo having 3 "Major Crater" biomes is NOT a bug!
+        "Highlands","Lowlands","Major Crater","Major Crater","Major Crater",
+        "Mara","Midlands","Minor Craters"],
+    'Vall': ["Highlands","Lowlands","Midlands","Poles"]
 }
 
 page_break_before_planets = ['Kerbin','Mun','Minmus','Laythe']
-
-planets = """
-Kerbol
-Moho
-Eve
-Gilly
-Kerbin
-Mun
-Minmus
-Duna
-Ike
-Dres
-Jool
-Laythe
-Vall
-Tylo
-Bop
-Pol
-Eeloo
-""".strip().split()
-
-moons = """
-Gilly
-Mun
-Minmus
-Ike
-Laythe
-Vall
-Tylo
-Bop
-Pol
-""".split()
-
-for planet in planets:
-    if planet not in biomes:
-        biomes[planet] = ['&nbsp;']
+moons = ["Gilly","Mun","Minmus","Ike","Laythe","Vall","Tylo","Bop","Pol"]
 
 atmosphere_havers = set("Kerbin Eve Duna Jool Laythe".split())
 
@@ -180,21 +184,18 @@ def get_values(planet,mzone,test):
         'base': base,
         'multiplier': multiplier
     }
-    
 
-   
 no_water_tests = set(['Seis','Nose'])
 need_atmosphere_tests = set(['Baro','Nose'])
 
-
-if 0:
+if 0: #DEBUG switch
     print tests
     print zones
     print zone_test_to_scope
     print "--"
     print mzones
     print _
-    print mzone_planet_to_multiplier
+    print planet_mzone_to_multiplier
     print zone2mzone
     sys.exit(1)
 
@@ -205,11 +206,11 @@ print """
 <html>
 <Head>
 <style>
-	body {
-		font-family: "Trebuchet MS", Helvetica, sans-serif;
-		font-size: 12pt;
-	}
-    
+    body {
+        font-family: "Trebuchet MS", Helvetica, sans-serif;
+        font-size: 12pt;
+    }
+
     div.header {
         text-align: center;
     }
@@ -225,16 +226,16 @@ print """
         border-collapse: collapse;
         border: none;
     }
-    
+
     tr.newpage {
         page-break-before: always;
     }
-    
+
     td.null {
         background-color: #fff;
         border: none;
     }
-    
+
     th.row {
         text-align: left;
         border-top: 1px solid #aaa;
@@ -242,11 +243,11 @@ print """
         border-right: none;
         border-bottom: 1px solid #aaa;
     }
-    
+
     th.planet {
         text-align: center;
     }
-    
+
     td,th {
         padding: 2px;
         border: 1px solid #aaa;
@@ -269,14 +270,14 @@ print """
         border: 1px solid #888;
     }
     thead {display: table-header-group;}
-    
+
 </style>
 </head>
 <body>
 <div class=header>
     <img src="img/logo.png" width=300><BR>
     <H1>Science Checklist</h1>
-    Revision 1 &mdash; KSP version 0.23 &mdash; 2014 June 28.
+    Revision 3 &mdash; KSP version 1.0 &mdash; 2015 April 27.
     <P>
 </div>
 """
@@ -289,7 +290,7 @@ for test in tests:
     print "<img src='img/tests/%s.png' width=48><BR>" % test
     print "%s" % test
 print "</thead><tbody>"
-for i_planet,planet in enumerate(planets):
+for planet in biomes.iterkeys():
     num_planet_rows = 5
     has_atmosphere = planet in atmosphere_havers
 
@@ -302,13 +303,13 @@ for i_planet,planet in enumerate(planets):
     for i_zone,zone in enumerate(applicable_zones):
         mzone = zone2mzone[zone]
         if mzone=='Fly' and not has_atmosphere: continue
-        
+
         for i_biome,biome in enumerate(applicable_biomes):
             c = ''
             if i_zone==0 and i_biome==0 and planet in page_break_before_planets:
                 c='newpage'
             print "<tr class='%s'>" % c
-            
+
             if i_zone==0 and i_biome==0: # planet label
                 print "<th class='row planet' rowspan=%d>" % (num_zones*num_biomes)
                 w=64
@@ -316,12 +317,12 @@ for i_planet,planet in enumerate(planets):
                 if planet=='Kerbol': w=96
                 print "<img src='img/planets/%s.png' width=%d><BR>" % (planet,w)
                 print "%s" % planet
-                
+
             if i_biome==0: # zone label
                 print "<th class=row rowspan=%d>%s" % (num_biomes,zone)
-                
+
             print "<th class=row>%s" % biome.replace(' ','&nbsp;')
-            
+
             for test in tests:
                 scope = zone_test_to_scope[zone][test]
                 if planet in no_surface and zone=='Surface': scope='--'
@@ -359,7 +360,8 @@ print "</table>"
 
 print """
 <div class=footer>
-Created by Tyler Bletsch &mdash; <a href="http://discspace.org/">discspace.org</a>
+Created by Tyler Bletsch &mdash; <a href="http://discspace.org/">discspace.org</a><br />
+Modified for 1.0 by Dimitri Molenaars &mdash; <a href="http://tyrope.nl/">tyrope.nl</a>
 </div>
 </body></html>
 
