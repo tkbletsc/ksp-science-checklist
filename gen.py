@@ -7,6 +7,12 @@
 
 import sys,os,re
 
+##################################################
+##### UTILITY FUNCTIONS
+##################################################
+
+# Parse a tab-delimited string into a 2D array
+# (The result of pasting in from Excel is a tab-separated array, so this is a lazy way to import data while still having the code be readable)
 def parse_table(table_tsv, xform=None):
     table_rows = table_tsv.strip().split("\n")
 
@@ -22,11 +28,17 @@ def parse_table(table_tsv, xform=None):
             table[row_header][col_header] = value
     return (row_headers,col_headers,table)
 
+# format numbers with non-trivial fractional components like ###.#, numbers close to integers get shown as integers
 def fmt(v):
     if v-int(v)>0.05:
         return "%.1f" % v
     else:
         return "%d" % v
+
+##################################################
+##### RAW DATA
+##### (Data-munging code in here is just doing some transformation to make lookups easier later, and is safe to ignore.
+##################################################
 
 #Known bug: Splashed and Landed aren't modeled seperately,
 # causing inaccuracies across several planets and biomes.
@@ -165,6 +177,8 @@ zone2mzone = {
     'SpaceLow':'Space',
 }
 
+# Algorithm to get the value of a given experiment. 
+# BUG: The 'Recover' test is known to be wrong.
 def get_values(planet,mzone,test):
     if test=='Recover':
         return {
@@ -185,7 +199,10 @@ def get_values(planet,mzone,test):
         'multiplier': multiplier
     }
 
+# which experiments cant be done in water?
 no_water_tests = set(['Seis','Nose'])
+
+# which experiments need at atmosphere to work?
 need_atmosphere_tests = set(['Baro','Nose'])
 
 if 0: #DEBUG switch
@@ -201,6 +218,10 @@ if 0: #DEBUG switch
 
 #NOTE no water for nose/seis surface
 #NOTE recovery from section (need to glob Fly* and Space*)
+
+##################################################
+##### HTML HEADER STUFF
+##################################################
 
 print """
 <html>
@@ -290,6 +311,21 @@ for test in tests:
     print "<img src='img/tests/%s.png' width=48><BR>" % test
     print "%s" % test
 print "</thead><tbody>"
+
+##################################################
+##### TABLE GENERATION
+# The really sinful part - this started as a simple "iterate and print" loop, 
+# but I kept having to add conditions to match the reality of KSP. Things like 
+# "you need an atmosphere to be flying", "you can't land on planets with no surface", 
+# etc. There's also a bunch of conditionals for formatting things like HTML pagebreaks. 
+# The nastiest thing is scope, which can be "-", "--", or "---" depending on how "scopeless" 
+# it is...this makes no sense and is a strong indicator of brain damage on my part. Your 
+# best bet are the little comments on the conditional checks for that. Another horrible 
+# part is the insane math and logic around the row-spanning cells, since that screws 
+# up the nice orderly table logic.
+##################################################
+
+
 for planet in biomes.iterkeys():
     num_planet_rows = 5
     has_atmosphere = planet in atmosphere_havers
